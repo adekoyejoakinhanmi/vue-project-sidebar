@@ -1,11 +1,15 @@
 <template>
   <div class="auth">
-    <div class="auth-bg-img"></div>
+    <div class="auth-bg-img">
+      <img src="/img/rc-fuzzy.svg" />
+    </div>
     <div class="auth-details">
-      <div class="auth-logo">
-        <img src="/img/base-logo.png" alt="" />
+      <div class="auth-content">
+        <div class="auth-logo">
+          <img src="/img/base-logo.png" alt="" />
+        </div>
+        <nuxt />
       </div>
-      <nuxt />
     </div>
   </div>
 </template>

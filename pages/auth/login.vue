@@ -1,11 +1,7 @@
 <template>
   <form @submit.prevent="onSubmitted">
-    <h1 class="h4">Login in to your dashboard</h1>
-    <p class="grey-darker mb-4">
-      Please enter your email to login to your dashboard
-    </p>
+    <h1 class="h3 font-weight-bold text-center mb-4">Login</h1>
     <div class="form-group">
-      <label for="email">Email</label>
       <input
         id="email"
         v-model="loginDetails.email"
@@ -15,7 +11,6 @@
       />
     </div>
     <div class="form-group">
-      <label for="password">Password</label>
       <input
         id="password"
         v-model="loginDetails.password"
@@ -24,14 +19,12 @@
         required
       />
     </div>
-
-    <button type="submit" class="btn btn-block text-uppercase btn-primary">
-      Login
-    </button>
-    <div class="text-center pt-4">
-      <nuxt-link to="/auth/signup">Create Account</nuxt-link> |
+    <div class="mb-5">
       <a href="#">Forgot password?</a>
     </div>
+    <button type="submit" class="btn btn-lg btn-block btn-primary">
+      Login
+    </button>
   </form>
 </template>
 

@@ -6,6 +6,15 @@ $custom-select-focus-box-shadow: none;
 
 $grid-gutter-width:            20px;
 
+$primary:                   #219F21;
+
 $theme-colors: (
-  "primary"         :         #219F21
+  "primary"         :        $primary
 );
+
+
+$input-btn-padding-y:          .45rem;
+$input-btn-padding-x:          1rem;
+$input-btn-line-height:        1.8;
+$input-btn-focus-box-shadow:   none;
+$custom-select-focus-box-shadow: none;
