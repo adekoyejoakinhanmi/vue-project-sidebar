@@ -1,42 +1,30 @@
 <template>
   <auth-layout-base>
     <form @submit.prevent="onSubmitted">
-      <h1 class="h3 font-weight-bold text-center mb-4">Login</h1>
+      <h1 class="h3 font-weight-bold text-center mb-4">Forgot Password</h1>
+      <div class="mb-5">
+        To reset your password, enter your email address below and follow the
+        instructions in the reset link we will send you.
+      </div>
       <div class="form-group">
+        <label for="email">Email</label>
         <input
           id="email"
-          v-model="loginDetails.email"
+          v-model="email"
           type="email"
           class="form-control"
           placeholder="Email"
           required
         />
       </div>
-      <div class="form-group">
-        <input
-          id="password"
-          v-model="loginDetails.password"
-          type="password"
-          class="form-control"
-          placeholder="Password"
-          required
-        />
-      </div>
-      <div class="mb-5">
-        <nuxt-link to="/auth/forgot-password">
-          Forgot password?
-        </nuxt-link>
-      </div>
       <button type="submit" class="btn btn-lg btn-block btn-primary">
-        Login
+        Reset
       </button>
     </form>
   </auth-layout-base>
 </template>
 
 <script>
-import { mapActions } from 'vuex'
-
 export default {
   name: 'LoginPage',
   layout: 'auth',
@@ -44,20 +32,17 @@ export default {
   data() {
     return {
       loading: false,
-      loginDetails: {
-        email: '',
-        password: ''
-      }
+      email: ''
     }
   },
   methods: {
-    ...mapActions(['login']),
     async onSubmitted() {
       if (this.loading) return
       this.loading = true
       try {
-        await this.login(this.loginDetails)
-        this.$router.push('/')
+        await this.$api.auth.forgotPassword({ email: this.email })
+        // this.$toast.success('Password reset sent')
+        this.$router.push('/auth/login')
       } catch (error) {
         // eslint-disable-next-line
         console.log(error)
