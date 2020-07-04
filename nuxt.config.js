@@ -35,6 +35,7 @@ export default {
     '~/plugins/api',
     '~/plugins/filters',
     '~/plugins/components',
+    '~/plugins/vue-chartjs.js',
     { src: '~/plugins/client-init', mode: 'client' }
   ],
   /*

@@ -40,7 +40,7 @@ export const actions = {
       user: null,
       token: null
     }
-    commit('setUser', auth.profile)
+    commit('setUser', auth.user)
     commit('setToken', auth.token)
     app.$axios.setToken(auth.token, 'Bearer')
   },

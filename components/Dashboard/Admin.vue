@@ -1,16 +1,16 @@
 <template>
   <div>
     <top-bar />
-    User dasboard Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-    Incidunt laborum dolore non doloribus nulla soluta reiciendis repellat,
-    nisi, quae ea excepturi corporis praesentium qui sit iure fugit! Magni,
-    repudiandae necessitatibus.
+    <chart-area />
   </div>
 </template>
 
 <script>
+import ChartArea from './ChartArea'
+
 export default {
-  name: 'AdminDasboard'
+  name: 'AdminDasboard',
+  components: { ChartArea }
 }
 </script>
 
