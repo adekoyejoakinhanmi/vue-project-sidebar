@@ -3,44 +3,46 @@
     <div class="overlay" @click="ToggleSidebar"></div>
     <nav class="sidenav">
       <div class="logo-area">
-        <span class="logoimg mr-2 mb-3">
-          <img src="/logo.svg" />
+        <span class="logoimg">
+          <img src="/img/base-logo.png" />
         </span>
-        Bento Apps
+        <span class="logo-text">
+          Admin
+        </span>
       </div>
       <ul class="menu-area">
         <li v-if="!isFakeSidebarPage" class="apps-nav">
           <div class="app open">
-            <!-- <div class="app-name">
-              <span class="i-h">
-                <img src="/app-icon.svg" />
-              </span>
-              <span>{{ app.name }}</span>
-            </div> -->
             <ul class="app-links">
               <li>
                 <nuxt-link to="/">
-                  <span class="icon-lightbulb-o mr-2"></span>
+                  <span class="mr-2"></span>
                   Overview
                 </nuxt-link>
               </li>
               <li>
                 <nuxt-link to="/users">
-                  <span class="icon-users mr-2"></span>
+                  <span class="mr-2"></span>
                   Users
                 </nuxt-link>
               </li>
               <li>
                 <nuxt-link to="/transactions">
-                  <span class="icon-book mr-2"></span>
+                  <span class="mr-2"></span>
                   Transactions
                 </nuxt-link>
               </li>
               <li>
                 <nuxt-link to="/settings">
-                  <span class="icon-cog mr-2"></span>
+                  <span class="mr-2"></span>
                   Settings
                 </nuxt-link>
+              </li>
+              <li>
+                <a href="#">
+                  <sprite-icon class="mr-2" name="on-off" />
+                  Log out
+                </a>
               </li>
             </ul>
           </div>
@@ -50,18 +52,6 @@
           <div class="fake-nav-items"></div>
           <div class="fake-nav-items"></div>
           <div class="fake-nav-items"></div>
-        </li>
-        <!-- Add new application button -->
-        <!-- <li class="link-item new-app">
-          <button class="btn btn-block">
-            Add new Application
-            <img src="/add.svg" />
-          </button>
-        </li> -->
-        <li class="link-item log-out">
-          <a href="#">
-            Log out
-          </a>
         </li>
       </ul>
     </nav>
