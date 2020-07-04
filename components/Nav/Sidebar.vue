@@ -11,63 +11,48 @@
         </span>
       </div>
       <ul class="menu-area">
-        <!-- <li class="apps-nav">
-          <div class="app open">
-            <ul class="app-links"> -->
-        <li>
-          <nuxt-link to="/">
-            <span class="mr-2"></span>
-            Overview
+        <li v-for="(item, id) in menuOptions" :key="id">
+          <nuxt-link
+            :class="{ 'is-active': currentlyActive === item.activeName }"
+            :to="item.route"
+          >
+            <sprite-icon class="mr-2" :name="item.icon" />
+            {{ item.name }}
           </nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/users">
-            <span class="mr-2"></span>
-            Users
-          </nuxt-link>
-        </li>
-        <li>
-          <nuxt-link to="/transactions">
-            <span class="mr-2"></span>
-            Transactions
-          </nuxt-link>
-        </li>
-        <li>
-          <nuxt-link to="/settings">
-            <span class="mr-2"></span>
-            Settings
-          </nuxt-link>
-        </li>
-        <li>
-          <a href="#">
+          <a href="#" @click="effectLogout">
             <sprite-icon class="mr-2" name="on-off" />
             Log out
           </a>
         </li>
       </ul>
-      <!-- </div>
-        </li>
-      </ul> -->
     </nav>
   </aside>
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex'
+import { mapState, mapGetters, mapActions } from 'vuex'
+import { admin, recycler, items } from '@/assets/js/nav'
 
 export default {
   name: 'Sidebar',
   computed: {
-    ...mapState(['currentPage', 'sidebarOpen'])
+    ...mapState(['currentPage', 'sidebarOpen']),
+    ...mapGetters(['userRole']),
+    menuOptions() {
+      return this.userRole === 'admin' ? admin : recycler
+    },
+    currentlyActive() {
+      const { name } = this.$route
+      return items.find((t) => name.includes(t))
+    }
   },
   methods: {
-    ...mapActions(['ToggleSidebar']),
-    setOpenItem(id) {
-      if (this.openItem === id) {
-        this.openItem = ''
-        return false
-      }
-      this.openItem = id
+    ...mapActions(['ToggleSidebar', 'logout']),
+    effectLogout() {
+      this.logout()
+      this.$router.push('/auth/login')
     }
   }
 }

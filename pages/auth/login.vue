@@ -29,11 +29,14 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+
 export default {
   name: 'LoginPage',
   layout: 'auth',
   data() {
     return {
+      loading: false,
       loginDetails: {
         email: '',
         password: ''
@@ -41,8 +44,19 @@ export default {
     }
   },
   methods: {
-    onSubmitted() {
-      // implement logic here
+    ...mapActions(['login']),
+    async onSubmitted() {
+      if (this.loading) return
+      this.loading = true
+      try {
+        await this.login(this.loginDetails)
+        this.$router.push('/')
+      } catch (error) {
+        // eslint-disable-next-line
+        console.log(error)
+      } finally {
+        this.loading = false
+      }
     }
   }
 }

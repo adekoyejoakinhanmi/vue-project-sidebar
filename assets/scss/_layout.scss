@@ -118,8 +118,7 @@ ul.menu-area {
       }
 
       &:hover,
-      &.nuxt-link-exact-active.nuxt-link-active,
-      &.active {
+      &.is-active {
         text-decoration: none;
         background-color: rgba($color: $primary, $alpha: 0.1);
         border-right-color: rgba($color: $primary, $alpha: 0.9);

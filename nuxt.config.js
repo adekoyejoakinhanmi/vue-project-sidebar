@@ -30,7 +30,13 @@ export default {
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: ['~/plugins/components.js'],
+  plugins: [
+    '~/plugins/axios',
+    '~/plugins/api',
+    '~/plugins/filters',
+    '~/plugins/components',
+    { src: '~/plugins/client-init', mode: 'client' }
+  ],
   /*
    ** Nuxt.js dev-modules
    */
@@ -51,5 +57,9 @@ export default {
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
    */
-  build: {}
+  build: {},
+  env: {
+    API_URL: process.env.API_URL,
+    DEV_API_API: process.env.DEV_API_URL
+  }
 }

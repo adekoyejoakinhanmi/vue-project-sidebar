@@ -80,3 +80,18 @@ export const recycler = [
     activeName: 'r-account'
   }
 ]
+
+export const items = [
+  'index',
+  'profile',
+  'sorters',
+  'staff',
+  'wastebusters',
+  'operators',
+  'r-redemption',
+  'redemption',
+  'requests',
+  'recyclers',
+  'recycle',
+  'r-account'
+]

@@ -12,6 +12,7 @@ import { Sidebar } from '@/components/Nav'
 
 export default {
   name: 'DefaultLayout',
+  middleware: 'authenticated',
   components: {
     Sidebar
   }
