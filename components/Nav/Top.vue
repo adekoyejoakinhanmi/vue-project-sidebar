@@ -3,7 +3,7 @@
     <div class="page-name">
       <div class="sidebar-toggle">
         <button class="btn btn-sm" @click="ToggleSidebar">
-          <span class="icon-navicon"></span>
+          <sprite-icon name="menu" />
         </button>
       </div>
       <h1 class="page-title-main mb-0">

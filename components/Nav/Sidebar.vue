@@ -11,49 +11,43 @@
         </span>
       </div>
       <ul class="menu-area">
-        <li v-if="!isFakeSidebarPage" class="apps-nav">
+        <!-- <li class="apps-nav">
           <div class="app open">
-            <ul class="app-links">
-              <li>
-                <nuxt-link to="/">
-                  <span class="mr-2"></span>
-                  Overview
-                </nuxt-link>
-              </li>
-              <li>
-                <nuxt-link to="/users">
-                  <span class="mr-2"></span>
-                  Users
-                </nuxt-link>
-              </li>
-              <li>
-                <nuxt-link to="/transactions">
-                  <span class="mr-2"></span>
-                  Transactions
-                </nuxt-link>
-              </li>
-              <li>
-                <nuxt-link to="/settings">
-                  <span class="mr-2"></span>
-                  Settings
-                </nuxt-link>
-              </li>
-              <li>
-                <a href="#">
-                  <sprite-icon class="mr-2" name="on-off" />
-                  Log out
-                </a>
-              </li>
-            </ul>
-          </div>
+            <ul class="app-links"> -->
+        <li>
+          <nuxt-link to="/">
+            <span class="mr-2"></span>
+            Overview
+          </nuxt-link>
         </li>
-        <li v-else class="fake-nav">
-          <div class="fake-nav-items"></div>
-          <div class="fake-nav-items"></div>
-          <div class="fake-nav-items"></div>
-          <div class="fake-nav-items"></div>
+        <li>
+          <nuxt-link to="/users">
+            <span class="mr-2"></span>
+            Users
+          </nuxt-link>
+        </li>
+        <li>
+          <nuxt-link to="/transactions">
+            <span class="mr-2"></span>
+            Transactions
+          </nuxt-link>
+        </li>
+        <li>
+          <nuxt-link to="/settings">
+            <span class="mr-2"></span>
+            Settings
+          </nuxt-link>
+        </li>
+        <li>
+          <a href="#">
+            <sprite-icon class="mr-2" name="on-off" />
+            Log out
+          </a>
         </li>
       </ul>
+      <!-- </div>
+        </li>
+      </ul> -->
     </nav>
   </aside>
 </template>
@@ -64,11 +58,7 @@ import { mapState, mapActions } from 'vuex'
 export default {
   name: 'Sidebar',
   computed: {
-    ...mapState(['currentPage', 'sidebarOpen']),
-    isFakeSidebarPage() {
-      const fakePages = ['Add New App']
-      return fakePages.includes(this.currentPage)
-    }
+    ...mapState(['currentPage', 'sidebarOpen'])
   },
   methods: {
     ...mapActions(['ToggleSidebar']),

@@ -1,14 +1,16 @@
 <template>
-  <div>
-    Index
-    <button class="btn btn-primary">
-      Come
-    </button>
-  </div>
+  <admin-dashboard v-if="true" />
+  <recycler-dashboard v-else />
 </template>
 
 <script>
-export default {}
+export default {
+  name: 'IndexPage',
+  components: {
+    AdminDashboard: () => import('~/components/Dashboard/Admin.vue'),
+    RecyclerDashboard: () => import('~/components/Dashboard/Recycler.vue')
+  }
+}
 </script>
 
 <style></style>

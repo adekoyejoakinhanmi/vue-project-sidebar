@@ -8,10 +8,15 @@ $sidebar-width:           250px;
     position: absolute;
     height: 100vh;
     z-index: 99;
-    display: none;
+    opacity: 0;
+    // display: none;
+    transform: translateX(-$sidebar-width);
+    transition: 0.4s all ease;
     @media screen and (min-width: 768px) {
       position: relative;
-      display: block !important;
+      // display: block !important;
+      transform: translateX(0) !important;
+      opacity: 1;
       width: $sidebar-width;
       max-width: $sidebar-width;
     }
@@ -19,8 +24,11 @@ $sidebar-width:           250px;
       width: 100%;
       z-index: 99;
       display: block;
+      transform: translateX(0);
+      opacity: 1;
       .overlay {
         display: block;
+        opacity: 1;
       }
       .sidenav {
         transform: translateX(0);
@@ -32,7 +40,8 @@ $sidebar-width:           250px;
       height: 100%;
       z-index: 999;
       background: rgba($color: #000000, $alpha: 0.4);
-      display: none;
+      // display: none;
+      opacity: 0;
       cursor: pointer;
       @media screen and (min-width: 768px){
         display: none !important;
@@ -91,57 +100,29 @@ ul.menu-area {
   padding: 0;
   margin: 0;
   flex: 1;
+  padding: 0;
+  margin: 10px 0 0;
   li {
     display: block;
-    cursor: pointer;
-    &.link-item {
-      padding: 15px 25px;
-      margin-bottom: 15px;
-      &:not(.new-app):hover,
-      &:not(.new-app).active {
-        background: rgba($color: #fff, $alpha: 0.04);
-      }
-    }
-    &.apps-nav {
+    a {
+      padding: 1rem 20px 1rem 20px;
+      display: flex;
+      border-right: 4px solid transparent;
       transition: 0.3s ease;
-      .app {
-        padding: 2.5px 0;
-      }
-      ul.app-links {
-        padding: 0;
-        margin: 10px 0 0;
-        display: none;
-        li {
-          display: block;
-          a {
-            padding: 1rem 20px 1rem 20px;
-            display: flex;
-            border-right: 4px solid transparent;
-            transition: 0.3s ease;
-            color: #595959;
-            border-bottom: 0.5px solid rgba(#D0CBCB, 0.5);
+      color: #595959;
+      border-bottom: 0.5px solid rgba(#D0CBCB, 0.5);
+      text-decoration: none;
 
-            .svg {
-              width: 18px;
-            }
+      .svg {
+        width: 18px;
+      }
 
-            &:hover,
-            &.nuxt-link-exact-active.nuxt-link-active,
-            &.active {
-              background-color: rgba($color: $primary, $alpha: 0.1);
-              border-right-color: rgba($color: $primary, $alpha: 0.9);
-            }
-          }
-        }
-      }
-      .app.open {
-        background: rgba($color: #fff, $alpha: 0.04);
-        ul.app-links {
-          display: block;
-        }
-      }
-      a:hover {
+      &:hover,
+      &.nuxt-link-exact-active.nuxt-link-active,
+      &.active {
         text-decoration: none;
+        background-color: rgba($color: $primary, $alpha: 0.1);
+        border-right-color: rgba($color: $primary, $alpha: 0.9);
       }
     }
   }
@@ -164,6 +145,13 @@ ul.menu-area {
       @media screen and (min-width: 768px){
         display: none;
       }
+    }
+  }
+  .btn.btn-sm {
+    padding-top: 0;
+    padding-bottom: 0;
+    .svg {
+      width: 20px;
     }
   }
   .more-items {
