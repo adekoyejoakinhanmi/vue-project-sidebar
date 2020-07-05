@@ -1,4 +1,4 @@
-# recycle_points
+# Project Nuxt Starter
 
 ## Build Setup
 
