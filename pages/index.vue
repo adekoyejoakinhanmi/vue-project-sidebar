@@ -1,6 +1,6 @@
 <template>
   <admin-dashboard v-if="true" />
-  <recycler-dashboard v-else />
+  <user-dashboard v-else />
 </template>
 
 <script>
@@ -8,7 +8,7 @@ export default {
   name: 'IndexPage',
   components: {
     AdminDashboard: () => import('~/components/Dashboard/Admin.vue'),
-    RecyclerDashboard: () => import('~/components/Dashboard/Recycler.vue')
+    UserDashboard: () => import('~/components/Dashboard/User.vue')
   }
 }
 </script>
