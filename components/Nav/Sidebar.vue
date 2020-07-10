@@ -30,7 +30,7 @@
 
 <script>
 import { mapState, mapGetters, mapActions } from 'vuex'
-import { admin, recycler, items } from '@/assets/js/nav'
+import { admin, user, items } from '@/assets/js/nav'
 
 export default {
   name: 'Sidebar',
@@ -38,7 +38,7 @@ export default {
     ...mapState(['currentPage', 'sidebarOpen']),
     ...mapGetters(['userRole']),
     menuOptions() {
-      return this.userRole === 'admin' ? admin : recycler
+      return this.userRole === 'admin' ? admin : user
     },
     currentlyActive() {
       const { name } = this.$route

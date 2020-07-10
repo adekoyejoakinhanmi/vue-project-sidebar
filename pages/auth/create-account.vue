@@ -3,7 +3,7 @@
     <form @submit.prevent="onSubmitted">
       <h1 class="h3 font-weight-bold text-center mb-4">Forgot Password</h1>
       <div class="mb-5 text-center">
-        Fill the following form to register as a recycler
+        Fill the following form to register
       </div>
       <div class="row">
         <div class="col-md-6">

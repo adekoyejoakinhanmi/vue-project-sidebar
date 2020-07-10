@@ -1,11 +1,7 @@
 <template>
   <auth-layout-base>
     <form @submit.prevent="onSubmitted">
-      <h1 class="h3 font-weight-bold text-center mb-4">Forgot Password</h1>
-      <div class="mb-5">
-        To reset your password, enter your email address below and follow the
-        instructions in the reset link we will send you.
-      </div>
+      <h1 class="h3 font-weight-bold text-center mb-5">Forgot Password</h1>
       <div class="form-group">
         <label for="email">Email</label>
         <input

@@ -9,17 +9,24 @@ export default {
    ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
-    title: 'Recycle Points',
+    title: 'Vue App Started',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: 'Get points for recycling'
+        content: 'App dashboard to quickly get started with vue dev'
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [
+      {
+        rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap'
+      },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ]
   },
 
   /*

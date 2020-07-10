@@ -1,13 +1,12 @@
 <template>
   <div>
-    <top-bar />
-    User Dashboard
+    User Account here
   </div>
 </template>
 
 <script>
 export default {
-  name: 'UserDashboard'
+  name: 'UserAccountPage'
 }
 </script>
 
