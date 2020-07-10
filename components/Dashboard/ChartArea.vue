@@ -5,7 +5,7 @@
         <div class="r-card">
           <div class="chart-wrapper">
             <div class="with-body">
-              <h5>Monthly Recycles</h5>
+              <h5>Chart Data</h5>
             </div>
             <hr />
             <monthly-summary-chart />
@@ -13,8 +13,8 @@
         </div>
       </div>
       <div class="col-md-3">
-        <div class="r-card">
-          Rating here
+        <div class="r-card h-100 with-body">
+          Other Data here
           <hr />
         </div>
       </div>

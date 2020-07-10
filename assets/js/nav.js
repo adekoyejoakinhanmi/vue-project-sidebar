@@ -5,48 +5,48 @@ export const admin = [
     icon: 'dashboard',
     activeName: 'index'
   },
-  {
-    name: 'Recyclers',
-    route: '/recyclers',
-    icon: 'redo',
-    activeName: 'recyclers'
-  },
-  {
-    name: 'Requests',
-    route: '/requests',
-    icon: 'message',
-    activeName: 'requests'
-  },
-  {
-    name: 'Redemption',
-    route: '/redemption',
-    icon: 'stamp',
-    activeName: 'redemption'
-  },
-  {
-    name: 'Waste Busters',
-    route: '/wastebusters',
-    icon: 'trash-redo',
-    activeName: 'wasterbusters'
-  },
-  {
-    name: 'Sorters',
-    route: '/sorters',
-    icon: 'add-list',
-    activeName: 'sorters'
-  },
-  {
-    name: 'Operators',
-    route: '/operators',
-    icon: 'operate',
-    activeName: 'operators'
-  },
-  {
-    name: 'Staff',
-    route: '/staff',
-    icon: 'worker',
-    activeName: 'staff'
-  },
+  // {
+  //   name: 'Recyclers',
+  //   route: '/recyclers',
+  //   icon: 'redo',
+  //   activeName: 'recyclers'
+  // },
+  // {
+  //   name: 'Requests',
+  //   route: '/requests',
+  //   icon: 'message',
+  //   activeName: 'requests'
+  // },
+  // {
+  //   name: 'Redemption',
+  //   route: '/redemption',
+  //   icon: 'stamp',
+  //   activeName: 'redemption'
+  // },
+  // {
+  //   name: 'Waste Busters',
+  //   route: '/wastebusters',
+  //   icon: 'trash-redo',
+  //   activeName: 'wasterbusters'
+  // },
+  // {
+  //   name: 'Sorters',
+  //   route: '/sorters',
+  //   icon: 'add-list',
+  //   activeName: 'sorters'
+  // },
+  // {
+  //   name: 'Operators',
+  //   route: '/operators',
+  //   icon: 'operate',
+  //   activeName: 'operators'
+  // },
+  // {
+  //   name: 'Staff',
+  //   route: '/staff',
+  //   icon: 'worker',
+  //   activeName: 'staff'
+  // },
   {
     name: 'Profile',
     route: '/profile',

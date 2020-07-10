@@ -56,7 +56,7 @@ export default {
         datasets: [
           {
             label: 'Moneth',
-            backgroundColor: '#219F21',
+            backgroundColor: '#183FBC',
             borderColor: '#3751FF',
             data
           }

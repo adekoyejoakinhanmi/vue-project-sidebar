@@ -27,7 +27,7 @@
           Forgot password?
         </nuxt-link>
       </div>
-      <button type="submit" class="btn btn-lg btn-block btn-primary">
+      <button type="submit" class="btn btn-block btn-primary">
         Login
       </button>
     </form>

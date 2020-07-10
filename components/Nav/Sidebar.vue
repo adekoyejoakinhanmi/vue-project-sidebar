@@ -3,11 +3,8 @@
     <div class="overlay" @click="ToggleSidebar"></div>
     <nav class="sidenav">
       <div class="logo-area">
-        <span class="logoimg">
-          <img src="/img/base-logo.png" />
-        </span>
-        <span class="logo-text">
-          Admin
+        <span class="logoimg text-center">
+          App Logo
         </span>
       </div>
       <ul class="menu-area">

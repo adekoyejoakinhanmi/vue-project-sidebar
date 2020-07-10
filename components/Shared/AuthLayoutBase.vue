@@ -1,12 +1,12 @@
 <template>
   <div class="auth">
     <div class="auth-bg-img">
-      <img src="/img/rc-fuzzy.svg" />
+      <img src="/img/login-bg.svg" />
     </div>
     <div class="auth-details">
       <div class="auth-content">
         <div class="auth-logo">
-          <img src="/img/base-logo.png" alt="" />
+          App Logo Here
         </div>
         <slot />
       </div>
